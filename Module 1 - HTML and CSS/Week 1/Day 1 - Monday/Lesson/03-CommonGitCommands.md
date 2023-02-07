@@ -10,7 +10,7 @@
 
 - git add .
 - git commit -m "commit message"
-- git push remote branch
+- git push remote_repository_name branch_name
 
 ## Cloning a Repository
 
@@ -18,10 +18,12 @@
 
 ## Getting Updates from Remote Repository
 
-- git fetch remote
+- git fetch remote_repository_name
 
     OR
 
-- git pull remote
+- git pull remote_repository_name
 
-git remote rm project
+## Removing a Remote Repository
+
+- git remote rm remote_repository_name
