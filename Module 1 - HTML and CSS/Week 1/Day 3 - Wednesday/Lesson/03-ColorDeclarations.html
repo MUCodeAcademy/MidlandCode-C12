@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Color Declarations</title>
+    <style>
+      section {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      div {
+        flex-basis: calc(100% / 7);
+        height: 100px;
+        margin: 0px;
+      }
+      h1,
+      p {
+        text-align: center;
+      }
+
+      .red {
+        background-color: red;
+      }
+      .orange {
+        background-color: orange;
+      }
+      .yellow {
+        background-color: yellow;
+      }
+      .green {
+        background-color: green;
+      }
+      .blue {
+        background-color: blue;
+      }
+      .indigo {
+        background-color: indigo;
+      }
+      .violet {
+        background-color: violet;
+      }
+
+      .blue,
+      .indigo,
+      .violet {
+        color: white;
+      }
+
+      .red-h {
+        background-color: #ff0000;
+      }
+      .orange-h {
+        background-color: #ffa500;
+      }
+      .yellow-h {
+        background-color: #ffff00;
+      }
+      .green-h {
+        background-color: #008000;
+      }
+      .blue-h {
+        background-color: #0000ff;
+      }
+      .indigo-h {
+        background-color: #4b0082;
+      }
+      .violet-h {
+        background-color: #ee82ee;
+      }
+
+      .red-r {
+        background-color: rgb(255, 0, 0);
+      }
+      .orange-r {
+        background-color: rgb(255, 165, 0);
+      }
+      .yellow-r {
+        background-color: rgb(255, 255, 0);
+      }
+      .green-r {
+        background-color: rgb(0, 128, 0);
+      }
+      .blue-r {
+        background-color: rgb(0, 0, 255);
+      }
+      .indigo-r {
+        background-color: rgb(75, 0, 130);
+      }
+      .violet-r {
+        background-color: rgb(238, 130, 238);
+      }
+
+      .red-ra {
+        background-color: rgba(255, 0, 0, 0.5);
+      }
+      .orange-ra {
+        background-color: rgba(255, 165, 0, 0.5);
+      }
+      .yellow-ra {
+        background-color: rgba(255, 255, 0, 0.5);
+      }
+      .green-ra {
+        background-color: rgba(0, 128, 0, 0.5);
+      }
+      .blue-ra {
+        background-color: rgba(0, 0, 255, 0.5);
+      }
+      .indigo-ra {
+        background-color: rgba(75, 0, 130, 0.5);
+      }
+      .violet-ra {
+        background-color: rgba(238, 130, 238, 0.5);
+      }
+
+      .red-hs {
+        background-color: hsl(0, 100%, 50%);
+      }
+      .orange-hs {
+        background-color: hsl(39, 100%, 50%);
+      }
+      .yellow-hs {
+        background-color: hsl(60, 100%, 50%);
+      }
+      .green-hs {
+        background-color: hsl(120, 100%, 25%);
+      }
+      .blue-hs {
+        background-color: hsl(240, 100%, 50%);
+      }
+      .indigo-hs {
+        background-color: hsl(275, 100%, 25%);
+      }
+      .violet-hs {
+        background-color: hsl(300, 76%, 72%);
+      }
+
+      .blue,
+      .indigo,
+      .violet,
+      .blue-h,
+      .indigo-h,
+      .violet-h,
+      .blue-hs,
+      .indigo-hs,
+      .violet-hs,
+      .blue-r,
+      .blue-ra,
+      .indigo-r,
+      .indigo-ra,
+      .violet-r,
+      .violet-ra {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Keyword Colors</h1>
+    <section>
+      <div class="red">red</div>
+      <div class="orange">orange</div>
+      <div class="yellow">yellow</div>
+      <div class="green">green</div>
+      <div class="blue">blue</div>
+      <div class="indigo">indigo</div>
+      <div class="violet">violet</div>
+    </section>
+    <p>
+      Currently there are dozens of keywords as of last revision. More can be
+      found
+      <a
+        target="_blank"
+        href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value"
+        >here</a
+      >
+    </p>
+
+    <h1>Hex Values</h1>
+    <section>
+      <div class="red-h">#FF0000</div>
+      <div class="orange-h">#FFa500</div>
+      <div class="yellow-h">#FFFF00</div>
+      <div class="green-h">#008000</div>
+      <div class="blue-h">#0000FF</div>
+      <div class="indigo-h">#4b0082</div>
+      <div class="violet-h">#ee82ee</div>
+    </section>
+    <p>
+      There are literally 16<sup>6</sup> different combinations of hex values.
+      You can play around with picking some
+      <a target="_blank" href="https://htmlcolorcodes.com/color-picker/"
+        >here</a
+      >
+    </p>
+
+    <h1>RGBAlpha (Opacity) Values</h1>
+    <section>
+      <div class="red-r">rgb(255,0,0)</div>
+      <div class="orange-r">rgb(255,165,0)</div>
+      <div class="yellow-r">rgb(255,255,0)</div>
+      <div class="green-r">rgb(0,128,0)</div>
+      <div class="blue-r">rgb(0,0,255)</div>
+      <div class="indigo-r">rgb(75,0,130)</div>
+      <div class="violet-r">rgb(238,130,238)</div>
+      <div class="red-ra">rgba(255,0,0, .5)</div>
+      <div class="orange-ra">rgba(255,165,0, .5)</div>
+      <div class="yellow-ra">rgba(255,255,0, .5)</div>
+      <div class="green-ra">rgba(0,128,0, .5)</div>
+      <div class="blue-ra">rgba(0,0,255, .5)</div>
+      <div class="indigo-ra">rgba(75,0,130, .5)</div>
+      <div class="violet-ra">rgba(238,130,238, .5)</div>
+    </section>
+    <p>
+      There are just as many options as Hex values. This is just a different way
+      of writing them. The last section of the above include the a value for
+      transparency. You can play around with picking some
+      <a target="_blank" href="https://htmlcolorcodes.com/color-picker/"
+        >here</a
+      >
+    </p>
+
+    <h1>HSL (Hue, Saturation, Lightness) Values</h1>
+    <section>
+      <div class="red-hs">hsl(0,100%, 50%)</div>
+      <div class="orange-hs">hsl(39,100%,50%)</div>
+      <div class="yellow-hs">hsl(60,100%,50%)</div>
+      <div class="green-hs">hsl(120,100%,25%)</div>
+      <div class="blue-hs">hsl(240,100%,50%)</div>
+      <div class="indigo-hs">hsl(275,100%,25%)</div>
+      <div class="violet-hs">hsl(300,76%,72%)</div>
+    </section>
+    <p>
+      There are just as many options as Hex and RGB values. This is just a
+      different way of writing them. The last three of the above values include
+      the a value for transparency. You can play around with picking some
+      <a target="_blank" href="https://htmlcolorcodes.com/color-picker/"
+        >here</a
+      >
+    </p>
+  </body>
+</html>

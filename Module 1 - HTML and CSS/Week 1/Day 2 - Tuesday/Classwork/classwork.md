@@ -8,7 +8,7 @@
   - At least one Item should span across multiple rows
   - Add styling (either in-line or via external stylesheet) to ensure it is working properly for multiple columns / rows
 
-- Take the existing schedule you wrote earlier and add a form to it.
+- If completed:
 
   - Add a contact form with pertinent information about you or a fictitious service that you would want to know from the customer
   - Include at least 1 text, 1 set of radios, 1 set of checkboxes, and one select

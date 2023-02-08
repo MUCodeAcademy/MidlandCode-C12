@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Adding Fonts</title>
+
+    <style>
+      @font-face {
+        font-family: myFont;
+        src: local("BarcodeFont.ttf"),
+          url("https://mdn.github.io/css-examples/web-fonts/VeraSeBd.ttf") format('truetype');
+      }
+      header {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      a {
+        flex-basis: 48%;
+        margin: 1%;
+        text-decoration: none;
+        background-color: slategray;
+        color: white;
+        text-align: center;
+      }
+      .center {
+        text-align: center;
+      }
+      /*Should always end with a generic font: serif, sans-serif, monospace, cursive or fantasy.*/
+      .font-stack1 {
+        font-family: myFont, "Script MT Bold";
+      }
+
+      .font-stack2 {
+        font-family: "Roboto", -apple-system, "San Francisco", "Segoe UI",
+          "Helvetica Neue", sans-serif;
+      }
+
+      .font-stack3 {
+        font-family: "Barriecito", cursive;
+      }
+
+      .font-stack4 {
+        font-family: "Kavivanar", cursive;
+      }
+    </style>
+
+    <link href="https://fonts.googleapis.com/css2?family=Barriecito&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Kavivanar&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <a href="https://fonts.google.com/" target="_blank">Google Fonts</a>
+      <a href="https://www.cssfontstack.com/" target="_blank">Font Stacks</a>
+    </header>
+    <h1 class="font-stack1 center">LOREM IPSUM</h1>
+    <p class="font-stack1">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis
+      sodales enim, at varius est gravida non. Duis faucibus rutrum diam, et
+      feugiat velit tempus eget. Quisque convallis ipsum et nisi rhoncus, ut
+      aliquam odio suscipit. Maecenas tristique lectus eu elementum pulvinar.
+      Cras lobortis at nulla at imperdiet. Vivamus id tellus imperdiet, finibus
+      nunc sit amet, tincidunt nulla. Etiam dignissim pharetra nibh vel gravida.
+      Vestibulum auctor bibendum turpis, in laoreet leo porttitor sed.
+      Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+      cubilia Curae; Nunc euismod tristique ligula non consectetur. Aenean eu
+      dapibus eros. Mauris ut sodales arcu. Maecenas venenatis scelerisque enim
+      eu efficitur. Nulla facilisi. Integer a rhoncus quam. Fusce luctus ex non
+      fermentum bibendum. Proin tortor ex, accumsan non mattis ut, lobortis et
+      lorem. In lorem lorem, pharetra ut ipsum ac, rutrum gravida dolor.
+      Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+      ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus
+      et malesuada fames ac turpis egestas.
+    </p>
+
+    <h1 class="font-stack2 center">LOREM IPSUM</h1>
+    <p class="font-stack2">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis
+      sodales enim, at varius est gravida non. Duis faucibus rutrum diam, et
+      feugiat velit tempus eget. Quisque convallis ipsum et nisi rhoncus, ut
+      aliquam odio suscipit. Maecenas tristique lectus eu elementum pulvinar.
+      Cras lobortis at nulla at imperdiet. Vivamus id tellus imperdiet, finibus
+      nunc sit amet, tincidunt nulla. Etiam dignissim pharetra nibh vel gravida.
+      Vestibulum auctor bibendum turpis, in laoreet leo porttitor sed.
+      Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+      cubilia Curae; Nunc euismod tristique ligula non consectetur. Aenean eu
+      dapibus eros. Mauris ut sodales arcu. Maecenas venenatis scelerisque enim
+      eu efficitur. Nulla facilisi. Integer a rhoncus quam. Fusce luctus ex non
+      fermentum bibendum. Proin tortor ex, accumsan non mattis ut, lobortis et
+      lorem. In lorem lorem, pharetra ut ipsum ac, rutrum gravida dolor.
+      Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+      ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus
+      et malesuada fames ac turpis egestas.
+    </p>
+
+    <h1 class="font-stack3 center">LOREM IPSUM</h1>
+    <p class="font-stack3">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis
+      sodales enim, at varius est gravida non. Duis faucibus rutrum diam, et
+      feugiat velit tempus eget. Quisque convallis ipsum et nisi rhoncus, ut
+      aliquam odio suscipit. Maecenas tristique lectus eu elementum pulvinar.
+      Cras lobortis at nulla at imperdiet. Vivamus id tellus imperdiet, finibus
+      nunc sit amet, tincidunt nulla. Etiam dignissim pharetra nibh vel gravida.
+      Vestibulum auctor bibendum turpis, in laoreet leo porttitor sed.
+      Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+      cubilia Curae; Nunc euismod tristique ligula non consectetur. Aenean eu
+      dapibus eros. Mauris ut sodales arcu. Maecenas venenatis scelerisque enim
+      eu efficitur. Nulla facilisi. Integer a rhoncus quam. Fusce luctus ex non
+      fermentum bibendum. Proin tortor ex, accumsan non mattis ut, lobortis et
+      lorem. In lorem lorem, pharetra ut ipsum ac, rutrum gravida dolor.
+      Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+      ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus
+      et malesuada fames ac turpis egestas.
+    </p>
+
+    <h1 class="font-stack4 center">LOREM IPSUM</h1>
+    <p class="font-stack4">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis
+      sodales enim, at varius est gravida non. Duis faucibus rutrum diam, et
+      feugiat velit tempus eget. Quisque convallis ipsum et nisi rhoncus, ut
+      aliquam odio suscipit. Maecenas tristique lectus eu elementum pulvinar.
+      Cras lobortis at nulla at imperdiet. Vivamus id tellus imperdiet, finibus
+      nunc sit amet, tincidunt nulla. Etiam dignissim pharetra nibh vel gravida.
+      Vestibulum auctor bibendum turpis, in laoreet leo porttitor sed.
+      Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+      cubilia Curae; Nunc euismod tristique ligula non consectetur. Aenean eu
+      dapibus eros. Mauris ut sodales arcu. Maecenas venenatis scelerisque enim
+      eu efficitur. Nulla facilisi. Integer a rhoncus quam. Fusce luctus ex non
+      fermentum bibendum. Proin tortor ex, accumsan non mattis ut, lobortis et
+      lorem. In lorem lorem, pharetra ut ipsum ac, rutrum gravida dolor.
+      Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+      ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus
+      et malesuada fames ac turpis egestas.
+    </p>
+  </body>
+</html>
