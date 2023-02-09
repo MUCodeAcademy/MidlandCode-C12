@@ -1,0 +1,48 @@
+# Practice Instructions
+
+## Step 1
+
+- Utilizing the image file of the same name (flexPractice.jpg) build a site using flex to achieve the design in the image:
+  ![flexPractice.JPG](flexPractice.JPG)
+- The divs with numbers should be correct order in the HTML and you should use CSS to change their orders:
+  Correct:
+  ```html
+  <div class="">1</div>
+  <div class="">2</div>
+  <div class="">3</div>
+  <div class="">4</div>
+  <div class="">5</div>
+  <div class="">6</div>
+  ```
+  Incorrect:
+  ```html
+  <div class="">1</div>
+  <div class="">6</div>
+  <div class="">2</div>
+  <div class="">5</div>
+  <div class="">4</div>
+  <div class="">3</div>
+  ```
+- There should be a minimum height for each div but there should be no maximum height. (min-height property)
+- Once you are finished with the styling, add actual content of varying sizes to the divs to ensure they still flex appropriately. This can be done with filler text or with actual content of your choice.
+- Use flexBox.html as a reference in order to achieve the desired effects.
+
+## Step 2
+
+ ![tetris.JPG](tetris.jpg)
+
+- Using the tetris.jpg file as a starting point, create the same layout using flex box.
+- Try first to get the horizontal layout correct and responsive to changes in browser width.
+- Once you have the previous step complete, see how you could make it work with responsive heights as well.
+
+*Using the box-sizing and box-shadow properties for each box would probably be a good method.
+
+## Google Form
+
+I'd like everyone to fill out this Google Form so that I can see how well everyone does or doesn't understand what we've learned so far: [Google Form](https://forms.gle/gj7qpVrWkgTAL7Ha6)
+
+## Optional Work over the weekend
+
+- [Git Tutorials](https://www.atlassian.com/git/tutorials/setting-up-a-repository)
+- [frontendmentor.io](frontendmentor.io)
+  - Good for HTML/CSS practice as well as learning GitHub basics

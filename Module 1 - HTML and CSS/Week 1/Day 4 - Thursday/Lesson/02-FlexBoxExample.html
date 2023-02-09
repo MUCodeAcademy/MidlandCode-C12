@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>FlexBox</title>
+
+    <style>
+      .page-container {
+        display: flex;
+        flex-flow: row wrap;
+        /* 
+          flex-flow is shorthand for
+          flex-direction: row;
+          flex-wrap: wrap; 
+        */
+        justify-content: space-evenly;
+      }
+
+      div:not(.container) {
+        background-color: #ffa500;
+        /* height: 275px; */
+        padding: 5px;
+      }
+
+      div:nth-child(odd) {
+        background-color: #0088ff;
+      }
+
+      .center {
+        text-align: center;
+      }
+
+      .third,
+      .half,
+      .quarter,
+      .three-quarters,
+      .two-thirds {
+        /* flex-grow: 1; */
+        /* flex-shrink: 1; */
+        border: 1px solid black;
+      }
+
+      .third {
+        flex-shrink: 1;
+        flex-basis: calc((100% / 3) - 12px);
+      }
+
+      .two-thirds {
+        flex: 1 1 calc((100% / 3) * 2 - 12px);
+        /* flex-grow: 1 
+               flex-shrink: 1;
+               flex-basis: calc((100% / 3) * 2 - 12px);
+            */
+      }
+
+      .half {
+        flex-basis: calc(50% - 12px);
+      }
+
+      .quarter {
+        /* flex-grow: 1; */
+        flex: 0 1 calc(25% - 12px);
+      }
+
+      .three-quarters {
+        flex-basis: calc(75% - 12px);
+      }
+
+      .full {
+        flex-basis: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="full center container">
+      <input
+        type="radio"
+        name="display"
+        value="static"
+        id="static"
+        onclick="heightChange(event)"
+        checked="checked"
+      /><label for="responsive">Static Height (275px)</label>
+      <input
+        type="radio"
+        name="display"
+        value="responsive"
+        id="responsive"
+        onclick="heightChange(event)"
+      /><label for="responsive">Responsive Height (auto)</label>
+    </div>
+    <main class="page-container">
+      <div class="third">
+        1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi maximus
+        tortor at neque faucibus feugiat. Vestibulum lobortis efficitur ipsum
+        vitae aliquet. Phasellus molestie aliquet metus id tempor. Integer
+        vulputate ex ac dolor facilisis, in dignissim nunc eleifend. Sed et
+        felis ligula. Mauris eget nulla eros. Aenean pharetra semper lobortis.
+        Donec rutrum sed justo suscipit pretium. Vestibulum scelerisque ornare
+        ligula.
+      </div>
+      <div class="third">
+        2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi maximus
+        tortor at neque faucibus feugiat. Vestibulum lobortis efficitur ipsum
+        vitae aliquet. Phasellus molestie aliquet metus id tempor. Integer
+        vulputate ex ac dolor facilisis, in dignissim nunc eleifend. Sed et
+        felis ligula. Mauris eget nulla eros. Aenean pharetra semper lobortis.
+        Donec rutrum sed justo suscipit pretium. Vestibulum scelerisque ornare
+        ligula.
+      </div>
+      <div class="third">
+        3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi maximus
+        tortor at neque faucibus feugiat. Vestibulum lobortis efficitur ipsum
+        vitae aliquet. Phasellus molestie aliquet metus id tempor. Integer
+        vulputate ex ac dolor facilisis, in dignissim nunc eleifend. Sed et
+        felis ligula. Mauris eget nulla eros. Aenean pharetra semper lobortis.
+        Donec rutrum sed justo suscipit pretium. Vestibulum scelerisque ornare
+        ligula.
+      </div>
+      <div class="two-thirds">
+        4 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi maximus
+        tortor at neque faucibus feugiat. Vestibulum lobortis efficitur ipsum
+        vitae aliquet. Phasellus molestie aliquet metus id tempor. Integer
+        vulputate ex ac dolor facilisis, in dignissim nunc eleifend. Sed et
+        felis ligula. Mauris eget nulla eros. Aenean pharetra semper lobortis.
+        Donec rutrum sed justo suscipit pretium. Vestibulum scelerisque ornare
+        ligula.
+      </div>
+      <div class="third">
+        5 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi maximus
+        tortor at neque faucibus feugiat. Vestibulum lobortis efficitur ipsum
+        vitae aliquet. Phasellus molestie aliquet metus id tempor. Integer
+        vulputate ex ac dolor facilisis, in dignissim nunc eleifend. Sed et
+        felis ligula. Mauris eget nulla eros. Aenean pharetra semper lobortis.
+        Donec rutrum sed justo suscipit pretium. Vestibulum scelerisque ornare
+        ligula.
+      </div>
+      <div class="third">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi maximus
+        tortor at neque faucibus feugiat. Vestibulum lobortis efficitur ipsum
+        vitae aliquet. Phasellus molestie aliquet metus id tempor. Integer
+        vulputate ex ac dolor facilisis, in dignissim nunc eleifend. Sed et
+        felis ligula. Mauris eget nulla eros. Aenean pharetra semper lobortis.
+        Donec rutrum sed justo suscipit pretium. Vestibulum scelerisque ornare
+        ligula.
+      </div>
+      <div class="two-thirds">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi maximus
+        tortor at neque faucibus feugiat. Vestibulum lobortis efficitur ipsum
+        vitae aliquet. Phasellus molestie aliquet metus id tempor. Integer
+        vulputate ex ac dolor facilisis, in dignissim nunc eleifend. Sed et
+        felis ligula. Mauris eget nulla eros. Aenean pharetra semper lobortis.
+        Donec rutrum sed justo suscipit pretium. Vestibulum scelerisque ornare
+        ligula.
+      </div>
+      <div class="two-thirds">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi maximus
+        tortor at neque faucibus feugiat. Vestibulum lobortis efficitur ipsum
+        vitae aliquet. Phasellus molestie aliquet metus id tempor. Integer
+        vulputate ex ac dolor facilisis, in dignissim nunc eleifend. Sed et
+        felis ligula. Mauris eget nulla eros. Aenean pharetra semper lobortis.
+        Donec rutrum sed justo suscipit pretium. Vestibulum scelerisque ornare
+        ligula.
+      </div>
+      <div class="two-thirds">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi maximus
+        tortor at neque faucibus feugiat. Vestibulum lobortis efficitur ipsum
+        vitae aliquet. Phasellus molestie aliquet metus id tempor. Integer
+        vulputate ex ac dolor facilisis, in dignissim nunc eleifend. Sed et
+        felis ligula. Mauris eget nulla eros. Aenean pharetra semper lobortis.
+        Donec rutrum sed justo suscipit pretium. Vestibulum scelerisque ornare
+        ligula.
+      </div>
+      <div class="half">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi maximus
+        tortor at neque faucibus feugiat. Vestibulum lobortis efficitur ipsum
+        vitae aliquet. Phasellus molestie aliquet metus id tempor. Integer
+        vulputate ex ac dolor facilisis, in dignissim nunc eleifend. Sed et
+        felis ligula. Mauris eget nulla eros. Aenean pharetra semper lobortis.
+        Donec rutrum sed justo suscipit pretium. Vestibulum scelerisque ornare
+        ligula.
+      </div>
+      <div class="half">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi maximus
+        tortor at neque faucibus feugiat. Vestibulum lobortis efficitur ipsum
+        vitae aliquet. Phasellus molestie aliquet metus id tempor. Integer
+        vulputate ex ac dolor facilisis, in dignissim nunc eleifend. Sed et
+        felis ligula. Mauris eget nulla eros. Aenean pharetra semper lobortis.
+        Donec rutrum sed justo suscipit pretium. Vestibulum scelerisque ornare
+        ligula.
+      </div>
+      <div class="half">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi maximus
+        tortor at neque faucibus feugiat. Vestibulum lobortis efficitur ipsum
+        vitae aliquet. Phasellus molestie aliquet metus id tempor. Integer
+        vulputate ex ac dolor facilisis, in dignissim nunc eleifend. Sed et
+        felis ligula. Mauris eget nulla eros. Aenean pharetra semper lobortis.
+        Donec rutrum sed justo suscipit pretium. Vestibulum scelerisque ornare
+        ligula.
+      </div>
+      <div class="quarter">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi maximus
+        tortor at neque faucibus feugiat. Vestibulum lobortis efficitur ipsum
+        vitae aliquet. Phasellus molestie aliquet metus id tempor. Integer
+        vulputate ex ac dolor facilisis, in dignissim nunc eleifend. Sed et
+        felis ligula. Mauris eget nulla eros. Aenean pharetra semper lobortis.
+        Donec rutrum sed justo suscipit pretium. Vestibulum scelerisque ornare
+        ligula.
+      </div>
+      <div class="quarter">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi maximus
+        tortor at neque faucibus feugiat. Vestibulum lobortis efficitur ipsum
+        vitae aliquet. Phasellus molestie aliquet metus id tempor. Integer
+        vulputate ex ac dolor facilisis, in dignissim nunc eleifend. Sed et
+        felis ligula. Mauris eget nulla eros. Aenean pharetra semper lobortis.
+        Donec rutrum sed justo suscipit pretium. Vestibulum scelerisque ornare
+        ligula.
+      </div>
+      <div class="three-quarters">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi maximus
+        tortor at neque faucibus feugiat. Vestibulum lobortis efficitur ipsum
+        vitae aliquet. Phasellus molestie aliquet metus id tempor. Integer
+        vulputate ex ac dolor facilisis, in dignissim nunc eleifend. Sed et
+        felis ligula. Mauris eget nulla eros. Aenean pharetra semper lobortis.
+        Donec rutrum sed justo suscipit pretium. Vestibulum scelerisque ornare
+        ligula.
+      </div>
+      <div class="quarter">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi maximus
+        tortor at neque faucibus feugiat. Vestibulum lobortis efficitur ipsum
+        vitae aliquet. Phasellus molestie aliquet metus id tempor. Integer
+        vulputate ex ac dolor facilisis, in dignissim nunc eleifend. Sed et
+        felis ligula. Mauris eget nulla eros. Aenean pharetra semper lobortis.
+        Donec rutrum sed justo suscipit pretium. Vestibulum scelerisque ornare
+        ligula.
+      </div>
+      <div class="quarter">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi maximus
+        tortor at neque faucibus feugiat. Vestibulum lobortis efficitur ipsum
+        vitae aliquet. Phasellus molestie aliquet metus id tempor. Integer
+        vulputate ex ac dolor facilisis, in dignissim nunc eleifend. Sed et
+        felis ligula. Mauris eget nulla eros. Aenean pharetra semper lobortis.
+        Donec rutrum sed justo suscipit pretium. Vestibulum scelerisque ornare
+        ligula.
+      </div>
+      <div class="quarter">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi maximus
+        tortor at neque faucibus feugiat. Vestibulum lobortis efficitur ipsum
+        vitae aliquet. Phasellus molestie aliquet metus id tempor. Integer
+        vulputate ex ac dolor facilisis, in dignissim nunc eleifend. Sed et
+        felis ligula. Mauris eget nulla eros. Aenean pharetra semper lobortis.
+        Donec rutrum sed justo suscipit pretium. Vestibulum scelerisque ornare
+        ligula.
+      </div>
+      <div class="quarter">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi maximus
+        tortor at neque faucibus feugiat. Vestibulum lobortis efficitur ipsum
+        vitae aliquet. Phasellus molestie aliquet metus id tempor. Integer
+        vulputate ex ac dolor facilisis, in dignissim nunc eleifend. Sed et
+        felis ligula. Mauris eget nulla eros. Aenean pharetra semper lobortis.
+        Donec rutrum sed justo suscipit pretium. Vestibulum scelerisque ornare
+        ligula.
+      </div>
+    </main>
+
+    <script>
+      var divs = document.querySelectorAll("div:not(.container)");
+
+      function heightChange(e) {
+        console.log(e.target, e.target.value);
+        divs.forEach(function (div) {
+          div.style.height =
+            e.target.value !== "responsive" ? 275 + "px" : "auto";
+        });
+      }
+      heightChange({ target: { value: "auto" } });
+    </script>
+  </body>
+</html>
