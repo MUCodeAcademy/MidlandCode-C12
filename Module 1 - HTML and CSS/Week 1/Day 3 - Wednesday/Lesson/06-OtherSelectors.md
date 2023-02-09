@@ -9,6 +9,7 @@ Pseudo-classes follow the same format (regardless of which one it is). You start
 - :last-child - Last child element of a specific type.
 - :first-child - First child of a specific type.
 - :hover - Only when the user hovers over the element.
+
 - :nth-child Specific rules for which children to apply the rules to. This can be one of the following patterns:
   - :nth-child(even) or :nth-child(odd) - selects only even or odd children respectively.
   - :nth-child(an+b) - Uses a calculation to select which child(ren) to apply the rules to. [Examples](https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child#Example_selectors)
@@ -17,11 +18,10 @@ Pseudo-classes follow the same format (regardless of which one it is). You start
 div:nth-child(5n) -> 5, 10, 15, etc
 ```
 ```
-div:nth-child(n + 6) -> 6, 7, 8, etc
+div:nth-child(2n + 6) -> 6, 8, 10, 12, etc
 ```
 ```
 div:nth-child(3n + 4) -> 4, 7, 10, etc
 ```
-
 
 - :not() - Everything but the specific selector(s) in the parenthesis

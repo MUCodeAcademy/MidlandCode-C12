@@ -19,6 +19,7 @@
 ## Getting Updates from Remote Repository
 
 - git fetch remote_repository_name
+- git merge remote_repository_name
 
     OR
 
