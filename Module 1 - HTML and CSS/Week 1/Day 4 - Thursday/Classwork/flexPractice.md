@@ -33,9 +33,8 @@
 
 - Using the tetris.jpg file as a starting point, create the same layout using flex box.
 - Try first to get the horizontal layout correct and responsive to changes in browser width.
-- Once you have the previous step complete, see how you could make it work with responsive heights as well.
 
-*Using the box-sizing and box-shadow properties for each box would probably be a good method.
+*Hint: Each box is its own div; using the box-sizing and box-shadow properties for each one would probably be a good method.
 
 ## Google Form
 
