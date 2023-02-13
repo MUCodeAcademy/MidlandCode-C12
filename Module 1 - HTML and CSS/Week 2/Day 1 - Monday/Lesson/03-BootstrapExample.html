@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Bootstrap Example</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <style>
+      .red {
+        background-color: red;
+      }
+
+      .orange {
+        background-color: orange;
+      }
+
+      .yellow {
+        background-color: yellow;
+      }
+
+      .green {
+        background-color: green;
+      }
+
+      .blue {
+        background-color: blue;
+      }
+
+      .blueviolet {
+        background-color: blueviolet;
+      }
+
+      .blue,
+      .green,
+      .blueviolet {
+        color: white;
+      }
+
+      .box {
+        font-size: 20px;
+        min-height: 200px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="container-fluid">
+      <div class="row">
+        <div class="col-sm-6 red box col-xl-2 col-lg-3 col-md-4 col-12"></div>
+        <div
+          class="col-sm-6 orange box col-xl-2 col-lg-3 col-md-4 col-12"
+        ></div>
+        <div
+          class="col-sm-6 yellow box col-xl-2 col-lg-3 col-md-4 col-12"
+        ></div>
+        <div class="col-sm-6 green box col-xl-2 col-lg-3 col-md-4 col-12"></div>
+        <div class="col-sm-6 blue box col-xl-2 col-lg-3 col-md-4 col-12"></div>
+        <div
+          class="col-sm-6 blueviolet box col-xl-2 col-lg-3 col-md-4 col-12"
+        ></div>
+      </div>
+    </main>
+    <script>
+      function showSizing() {
+        document.querySelectorAll(".box").forEach((el) => {
+          el.innerHTML = `Viewport Width: ${window.innerWidth} <br> Element Width: ${el.offsetWidth}`;
+        });
+      }
+      window.addEventListener("resize", showSizing);
+      showSizing();
+    </script>
+  </body>
+</html>
