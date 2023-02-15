@@ -106,3 +106,5 @@ The above is once again the _minimum_ you should accomplish for this project. It
 but you know all of the skills you need to complete it. Don't be afraid to ask questions of anyone in the class if you need help.
 If you happen to reach the end before others, feel free to add more functionality or offer assistance to your classmates.
 Remember, we're all in this together!
+
+Due date: February 27th 5:30
