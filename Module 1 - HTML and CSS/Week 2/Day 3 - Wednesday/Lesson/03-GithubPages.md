@@ -2,6 +2,8 @@
 
 If you want to serve a static web page (or series of html files) you can use GitHub pages to do so. It is incredibly easy to setup.
 
+Tutorial taken from: https://pages.github.com (you'll want to look at the instructions for "Project Site")
+
 ## Steps
 
 1. Ensure that you have a repository where your html file(s) are located. The main file needs to be in the top level folder and not in a sub folder of some sorts.

@@ -107,4 +107,4 @@ but you know all of the skills you need to complete it. Don't be afraid to ask q
 If you happen to reach the end before others, feel free to add more functionality or offer assistance to your classmates.
 Remember, we're all in this together!
 
-Due date: February 27th 5:30
+Due date: February 27th 5:30 pm
