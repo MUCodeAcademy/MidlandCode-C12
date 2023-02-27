@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intro To JS</title>
+  </head>
+
+  <body>
+    <h1>Using Javascript</h1>
+    <h2>Remember, this is JavaScript NOT Java</h2>
+
+    <!--External file link-->
+    <script src="01-IntroToJS.js"></script>
+    <script>
+      //  Using the console
+      console.log("Logging information to the console");
+      console.error("Scary error");
+      console.warn("WARNING DANGER HELP");
+      console.info("Here's some information for you!");
+      //  alert('This is an alert!');
+      //  Variable Declaration
+      const thisIsAConstant = 1; //This will not be reassigned
+      let yearNumber = 2023; //This may be reassigned
+      let yearString = "2023"; //not the same as yearNumber
+      console.log(yearNumber);
+      console.log(yearString);
+
+      //  let thePrompt = prompt("Enter a random string of letters...");
+      // console.log(thePrompt);
+
+      // PRIMITIVE TYPES (do not have any methods or properties)
+      // integer (1)
+      // float or double (1.23)
+      // string ("word")
+      // boolean (true/false)
+      // undefined (variables that have no value)
+      // null (variables that intentionally have no value)
+
+      let x; // This is undefined
+      let y = null; // This is null
+
+      // Types are dynamic in JavaScript, meaning they can be reassigned to a different type (this is not true in all programming languages)
+
+      data = 13; // data is initialized as a number
+      data = "word"; // data is now a string
+      data = true; // data is now a boolean
+
+      //  Changing a variable after the fact.
+      yearNumber = 2024;
+      console.log(yearNumber);
+
+      //  Array object
+      //                      0       1          2        3
+      let typesOfBears = ["Andean", "Black", "Brown", "Polar"];
+      let dogs = ["Husky", "Belgian Malinois", "Karelian Bear Dog"];
+      console.log(dogs[1]);
+      //  Zero Indexed Remember this!
+
+      let firstDog = dogs[0]; // dogs[0] --> "Husky"
+      let secondBear = typesOfBears[1];
+
+      let me = ["Justin", "Luce"];
+      let cat = ["Fred", "Luce"];
+      //  Multidimensional Arrays
+      let us = [me, cat]; //       0
+      //  Same as let us = [["Justin", "Luce"], ["Fred", "Luce"]]
+      console.log(me[0]); //Justin
+      console.log(cat[0]); //Fred
+      console.log(us[0][0]); //us[0] -> me[0] -> Justin
+
+      //Arrays don't care about type
+      let variedArray = [1, 2, true, [4, 5], 6, "number 7", undefined];
+
+      //Objects
+      let helloObject = {
+        greeting: "Hello",
+        target: "World",
+      };
+
+      //Objects with multiple types
+      let johnnyDangerously = {
+        genre: "Comedy",
+        yearReleased: 1984,
+        cast: ["Michael Keaton", "Joe Piscopo", "Marilu Henner"],
+        financials: {
+          budget: "9 Million",
+          "Box Office": "17.1 Million",
+        },
+      };
+      johnnyDangerously.director = "Amy Heckerling";
+
+      console.log(johnnyDangerously);
+
+      console.log(johnnyDangerously.financials.budget);
+
+      //simple math
+      let two = 2;
+      let three = 3;
+
+      let five = 2 + 3;
+      let alsoFive = two + three;
+
+      let six = 2 * 3;
+      let alsoSix = two * three;
+
+      three++;
+
+      // ++three
+      // --three
+      // three += 1;
+      console.log(three);
+      three--;
+      console.log(three);
+
+      console.log(six / three); // 2
+      console.log(six - three); // 3
+
+      //MODULO!
+      let sixModuleThree = 6 % 3;
+      let fiveModuleThree = five % three; // 0
+
+      //String concatenation (addition)
+      let firstName = "Justin";
+      let lastName = "Luce";
+      let fullName = firstName + lastName; // "JustinLuce"
+
+      let fullNameWithSpace = firstName + " " + lastName + " is my name"; // "Justin Luce is my name"
+
+      // This is the preferred method
+      let fullNameStringLiteral = `${firstName} ${lastName} is my name`; // "Justin Luce is my name"
+
+      // MATH IN JavaScript
+      // console.log("2" + 4); // 24
+      // console.log("2"+"4"); // 24
+      // console.log(2 - "4a"); // NaN (not a number)
+      // console.log("2" - "4"); // -2
+      // console.log(4 / "2"); // 2
+      // console.log("4" / "2"); // 2
+      // console.log(4 * "2"); // 8
+      // console.log("4" * "2"); // 8
+    </script>
+  </body>
+</html>
