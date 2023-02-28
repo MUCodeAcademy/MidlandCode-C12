@@ -19,7 +19,7 @@
       console.error("Scary error");
       console.warn("WARNING DANGER HELP");
       console.info("Here's some information for you!");
-      //  alert('This is an alert!');
+      // alert('This is an alert!');
       //  Variable Declaration
       const thisIsAConstant = 1; //This will not be reassigned
       let yearNumber = 2023; //This may be reassigned
@@ -27,8 +27,8 @@
       console.log(yearNumber);
       console.log(yearString);
 
-      //  let thePrompt = prompt("Enter a random string of letters...");
-      // console.log(thePrompt);
+      let thePrompt = prompt("Enter a random string of letters...");
+      console.log(thePrompt);
 
       // PRIMITIVE TYPES (do not have any methods or properties)
       // integer (1)
@@ -43,7 +43,7 @@
 
       // Types are dynamic in JavaScript, meaning they can be reassigned to a different type (this is not true in all programming languages)
 
-      data = 13; // data is initialized as a number
+      data = 13; // data is initialized as a integer
       data = "word"; // data is now a string
       data = true; // data is now a boolean
 
@@ -55,11 +55,11 @@
       //                      0       1          2        3
       let typesOfBears = ["Andean", "Black", "Brown", "Polar"];
       let dogs = ["Husky", "Belgian Malinois", "Karelian Bear Dog"];
-      console.log(dogs[1]);
-      //  Zero Indexed Remember this!
+      console.log(dogs[0]);
+      //  Zero Indexed (position) Remember this!
 
       let firstDog = dogs[0]; // dogs[0] --> "Husky"
-      let secondBear = typesOfBears[1];
+      let secondBear = typesOfBears[1]; // typesOfBears[1] --> "Black"
 
       let me = ["Justin", "Luce"];
       let cat = ["Fred", "Luce"];
@@ -70,10 +70,10 @@
       console.log(cat[0]); //Fred
       console.log(us[0][0]); //us[0] -> me[0] -> Justin
 
-      //Arrays don't care about type
+      // Arrays don't care about type
       let variedArray = [1, 2, true, [4, 5], 6, "number 7", undefined];
 
-      //Objects
+      // Objects
       let helloObject = {
         greeting: "Hello",
         target: "World",
@@ -89,27 +89,29 @@
           "Box Office": "17.1 Million",
         },
       };
-      johnnyDangerously.director = "Amy Heckerling";
 
       console.log(johnnyDangerously);
+      
+      console.log(johnnyDangerously.genre);
 
       console.log(johnnyDangerously.financials.budget);
+      
+      johnnyDangerously.director = "Amy Heckerling";
 
       //simple math
       let two = 2;
       let three = 3;
 
       let five = 2 + 3;
-      let alsoFive = two + three;
+      let alsoFive = two + three; // 2 + 3
 
       let six = 2 * 3;
       let alsoSix = two * three;
 
-      three++;
+      three++; //adds 1
+      three+=1; //adds 1
+      three--; //substracts 1
 
-      // ++three
-      // --three
-      // three += 1;
       console.log(three);
       three--;
       console.log(three);
