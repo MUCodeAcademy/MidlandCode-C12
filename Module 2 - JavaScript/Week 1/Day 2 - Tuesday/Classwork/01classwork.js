@@ -19,7 +19,6 @@
 // Math.floor always rounds the number down.
 // If max = 10, it should generate a random number from 1 to 10.
 
-
 // -----------------------------------------------------------------
 
 //! Using nested for loops, create and log the following pattern:
