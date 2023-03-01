@@ -1,4 +1,4 @@
-## Classwork Part 2
+## Classwork Part 2 (Optional)
 
 Create a text based game with at least 5 steps in the adventure. The user will be prompted with different questions at different steps. Feel free to replace the "game" with something similar. Essentially, you will be creating a text based flowchart.
 

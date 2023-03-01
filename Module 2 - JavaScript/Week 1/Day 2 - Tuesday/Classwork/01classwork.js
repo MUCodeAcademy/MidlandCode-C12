@@ -6,6 +6,12 @@
 //! log all characters until the end of the input.
 //! If the input is shorter than 4 characters, nothing should be logged.
 
+// let userInput = prompt("Enter a string");
+
+// for (let i = 3; i < userInput.length; i++) {
+//   console.log(userInput[i]); 
+// }
+
 // -----------------------------------------------------------------
 
 //! Pick a random number. Prompt the user to guess a number.
@@ -19,22 +25,53 @@
 // Math.floor always rounds the number down.
 // If max = 10, it should generate a random number from 1 to 10.
 
+// let max = 10;
+// let userGuess;
+// let numGuesses = 0;
+// let randomNum = Math.floor(Math.random() * max) + 1;
+
+// while (randomNum !== userGuess) {
+//     userGuess = parseInt(prompt(`${randomNum} Guess a random number between 1 - 10`));
+//     numGuesses++;
+// }
+
 // -----------------------------------------------------------------
 
 //! Using nested for loops, create and log the following pattern:
 /*
-//!    *
-//!    **
-//!    ***
-//!    ****
-//!    *****
+
+*
+**
+***
+****
+*****
+
 */
+
+for (let i = 1; i <= 5; i++) {
+    let row = "";
+    for (let j = 1; j <= i; j++) {
+        row += "*";
+    }
+    // console.log(row);
+}
 
 // -----------------------------------------------------------------
 
 //! Simulate a coin flip. Start a counter at 0. If the initial flip was heads,
 //! leave the counter at 0 and log: "It took 0 retries to get heads!".
 //! If the coin was tails, try again and keep doing so until heads happens. Log the amount of retries it took.
+
+let counter = -1;
+let coin;
+
+// 0 is heads and 1 is tails
+
+// Put this in a loop
+coin = Math.floor(Math.random() * 2);
+// This will generate a number between 0 and 1;
+// The highest number Math.random() can generate is .99,
+// So, if it generates .99, we multiply it by 2 to get 1.98, which gets rounded down to 1 by Math.floor()
 
 // COMPARISON PRACTICE
 // -----------------------------------------------------------------
