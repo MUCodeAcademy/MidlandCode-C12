@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Functions</title>
+
+    <script>
+      //Generic Overview:
+      //        function thisIsAFunction(parameter1, parameter2)
+      //        {
+      //            this is where you do things!
+      //
+      //            return (your return value);
+      //            more code or return on these lines
+      //        }
+      //        thisIsAFunction(argument1, argument2);
+
+      // let input = prompt("This is the argument") -> pops up a window takes input -> returns the input
+
+
+      //Basic function example
+      let number1 = 1;
+      let number2 = 2;
+
+      function addition(firstNumber, secondNumber) {
+        let result = firstNumber + secondNumber;
+        return result;
+      }
+
+      addition(number1, number2);
+      // output = addition(number1, number2);
+      // console.log(`output is ${output}`);
+
+      function greeting(name, age, country) {
+        if (age > 50) {
+          console.log(`Greetings ${name}`);
+        } else {
+          console.log(`What's up ${name}?`);
+        }
+        console.log(
+          " How long has it been since you've been back home to " +
+            country +
+            "?"
+        );
+      }
+      let myName = "Justin";
+      //Calling a function
+      greeting(myName, 23, "United States");
+
+      //Calling a function with incorrect number of arguments.
+      greeting("Justin", 400);
+
+      //Declaring function inside an object
+      let justin = {
+          name: {
+              first: "Justin",
+              last: "Luce",
+              greetingTo: function(name) {
+                console.log(`Nice to meet you ${name}, my name is ${this.first} ${this.last}`) // 'this' is bound to the 'name' object
+              }                                                                                // Without 'this', the code would try
+          },                                                                                   // to access 'first' and 'last' as global variables
+          hobbies: ["games", "music", "writing"]
+      };
+
+      justin.name.greetingTo("Steve");
+
+      // Declaring object inside a function
+      // There is a much easier way to do this using classes that we'll see later on
+      function personBuilder(firstName, lastName, hobbies) {
+        let person = {
+          name: {
+            first: firstName,
+            last: lastName,
+          },
+          greetingTo: function (name) {
+            console.log(
+              `Nice to meet you ${name}, my name is ${this.name.first} ${this.name.last}` // 'this' is bound to the person object
+            );
+          },
+          hobbies: hobbies,
+        };
+        return person;
+      }
+
+      // Invoking the function
+      let justinLuce = personBuilder("Justin", "Luce", [
+        "games",
+        "music",
+        "writing",
+      ]);
+
+      justinLuce.greetingTo("John");
+
+      //call function from console
+      console.log("----------------------------------");
+
+      // Different types of scope:
+
+      // Global: variable, function, or object defined outside of any function or object; can be accessed anywhere in the code.
+
+      // Local: variable, function, or object defined inside a function or object; can only be accessed within the function or object.
+
+      // Block: variables declared within a block (inside curly braces {}) are only accessable inside that block.
+
+      let variableOne = "First Variable"; // This has global scope; can be accessed anywhere
+      function showingScope() {
+        let variableTwo = "Second Variable"; // This only exists within the function (local scope)
+        console.log(variableOne, variableTwo);
+      }
+      showingScope();
+      // console.log(variableTwo);
+
+      function showingScopeRoundTwo() {
+        let variableOne = "2: Not the First Variable... or is it?";
+        console.log(variableOne);
+      }
+      showingScopeRoundTwo();
+      console.log(variableOne);
+
+      function showingScopeRoundThree() {
+        variableOne = "3: Not the First Variable... or is it?";
+        console.log(variableOne);
+      }
+      showingScopeRoundThree();
+      console.log(variableOne);
+
+      if (true) {
+        var cat = "meow";
+        const dog = "woof";
+        let bird = "chirp";
+      }
+      
+      console.log(cat); // will output 'meow'
+      // console.log(dog); // reference error
+      // console.log(bird); // reference error
+
+      function returningValues(a, b) {
+        return a + b;
+        return a - b; // Will never appear and a lot IDEs will warn you of that.
+      }
+
+      let six = returningValues(2, 4);
+      console.log("Computing Values: ", returningValues(1, 2));
+      console.log("----------------------------------");
+
+      function returningConditionalValues(a, b) {
+        if (a >= b) {
+          return a;
+        }
+        return b;
+
+        // The equivalent in one line:
+        return a >= b ? a: b;
+      }
+
+      // Recursion
+      // As a concept, this is very important, BUT the implementation is not as common in web development.
+
+      function recurse() {
+        if(condition) {
+            // stop calling itself
+            //...
+        } else {
+            recurse();
+        }
+      }
+
+
+      function countDown(fromNumber) {
+        console.log(fromNumber);
+
+        let nextNumber = fromNumber - 1; // 3 - 1, then 2 - 1, then 1 - 1, then stops
+
+        if (nextNumber > 0) {
+            countDown(nextNumber);
+        }
+      }
+
+      countDown(3);
+      console.log("----------------------------------");
+
+      // Arrow functions
+      // While we used the function keyword above, we can also use const and then an arrow function.
+      // Arrow functions will be used commonly moving forward, especially when we start covering React.
+      // Get used to arrow functions now and use them whenever you can.
+
+      // Without arrow functions
+
+      function addTwoNonArrow(x, y) {
+        return x + y;
+      }
+
+      const addTwoWithArrow = (x, y) => x + y; // this has implicit return (you don't need the 'return' keyword if it's one line)
+
+      // With more than one line and / or no return value
+      const arrowMultiLine = (x, y) => {
+        // code here
+        // if you want to return a value from the function, you HAVE to use the return keyword
+        output = x + y;
+        return output;
+      };
+
+      arrowMultiLine(2, 4);
+    </script>
+  </head>
+
+  <body></body>
+</html>
