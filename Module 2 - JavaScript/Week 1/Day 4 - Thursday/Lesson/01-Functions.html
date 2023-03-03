@@ -7,15 +7,15 @@
     <title>Functions</title>
 
     <script>
-      //Generic Overview:
-      //        function thisIsAFunction(parameter1, parameter2)
-      //        {
-      //            this is where you do things!
-      //
-      //            return (your return value);
-      //            more code or return on these lines
-      //        }
-      //        thisIsAFunction(argument1, argument2);
+      // Generic Overview:
+            //  function thisIsAFunction(parameter1, parameter2)
+            //  {
+            //      this is where you do things!
+      
+            //      return (your return value);
+            //      more code or return on these lines
+            //  }
+            //  thisIsAFunction(argument1, argument2);
 
       // let input = prompt("This is the argument") -> pops up a window takes input -> returns the input
 
@@ -103,6 +103,8 @@
       // Local: variable, function, or object defined inside a function or object; can only be accessed within the function or object.
 
       // Block: variables declared within a block (inside curly braces {}) are only accessable inside that block.
+      
+      // 
 
       let variableOne = "First Variable"; // This has global scope; can be accessed anywhere
       function showingScope() {
@@ -110,7 +112,7 @@
         console.log(variableOne, variableTwo);
       }
       showingScope();
-      // console.log(variableTwo);
+      // console.log(variableTwo); Should give a reference error
 
       function showingScopeRoundTwo() {
         let variableOne = "2: Not the First Variable... or is it?";
