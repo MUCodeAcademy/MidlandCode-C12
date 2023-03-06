@@ -7,9 +7,6 @@
 // -----------------------------------------------------------------
 //! Make a function called pow that accepts arguments x and y and returns the value of x to the y power
 
-// Think of how exponents work: 
-// 6^4 is just 6*6*6*6 -> can put this in a loop
-
 // -----------------------------------------------------------------
 //! Write a function that checks to see if the word as an argument is a palindrome (case insensitive) (toLowerCase() method)
 //! and log the result to the console.
