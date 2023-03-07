@@ -14,6 +14,14 @@
       //!   - Div 2 - Blue background, circular shape, 100px by 100px
       //!   - Div 3 - Orange Border, white with red text that says: "Div 3" 150px by 100px
       //!   - Div 4 - Fixed to the top, any color, and taking up the full width of the page.
+
+      // One way to accomplish executing something once the page loads is by adding an event listener
+      function test() {
+        console.log("running");
+      }
+      document.addEventListener("DOMContentLoaded", function() {
+        test();
+      });
     </script>
   </body>
 </html>
