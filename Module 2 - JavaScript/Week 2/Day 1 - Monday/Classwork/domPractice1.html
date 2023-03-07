@@ -32,10 +32,29 @@
       //!    4. Remove `.class5` from all divs with `.class5` and replace with .class6
       //!    5. Add `.class7` to ALL divs
       //!    6. Remove the element with `#div8`
-      //!    7. Take the div with `#div9` and move it to the top
-      //!    8. All divs with `.class2` should have a black background with white text
-      //!    9. Take the div with `#div10` and reduce the height and width to 42% of what it was
+      //!    7. All divs with `.class2` should have a black background with white text
+      //!    8. Take the div with `#div10` and reduce the height and width to 42% of what it was
       //!       (without hard-coding the number) and then change the id to `div10New`
+      let class1 = document.getElementsByClassName("class1");
+      let class3 = document.getElementsByClassName("class3");
+      let class4 = document.getElementsByClassName("class4");
+      let class5 = document.getElementsByClassName("class5");
+      for (let i = 0; i < class1.length; i++) {
+          class1[i].style.border = "2px solid orange";
+        }
+
+      for (let i = 0; i < class3.length; i++) {
+          class3[i].style.color = "red";
+      }
+
+      for (let i = 0; i < class4.length; i++) {
+          class4[i].style.color = "blue";
+      }
+
+      for (let i = 0; i < class5.length; i++) {
+        class5[i].classList.replace("class5", "class6");
+      }
+
     </script>
   </body>
 </html>
