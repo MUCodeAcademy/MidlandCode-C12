@@ -82,7 +82,7 @@
 //          Arrow keys: left   up  right  down
             let codes = [37,   38,   39,   40];
             if (codes.includes(e.keyCode)) {
-                e.preventDefault();           
+                e.preventDefault();
                 // If the event does not get explicitly handled,
                 // its default action should not be taken as it normally would be.
                 // Default actions of the arrows keys includes scrolling the page up/down or left/right.
@@ -90,7 +90,7 @@
             function moveSquare(attr, val) {
                 let squareDiv = document.getElementById('squareDiv');
                 let posValue = parseInt(squareDiv.style[attr]);
-                console.log(parseInt(squareDiv.style[attr]))
+                console.log(parseInt(squareDiv.style[attr]));
                 squareDiv.style[attr] = Number.isNaN(posValue) ? `${val}px` : `${val + posValue}px`;
                 // parseInt and Number essentially do the same thing, however
                 // Number will convert any data type into a number
