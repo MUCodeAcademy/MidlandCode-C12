@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // -----------------------------------------------------------------
+      //! Sort the students in order of highest score to lowest score
+      //! and then log them to the console in that order.
+      let students = [
+        { name: "Horatio", score: 60 },
+        { name: "Reginald", score: 80 },
+        { name: "Hortense", score: 75 },
+        { name: "Xavier", score: 100 },
+        { name: "Oslo", score: 90 },
+        { name: "Jennifer", score: 87 },
+        { name: "Robert", score: 90 },
+        { name: "Stephen", score: 50 },
+        { name: "Richard", score: 10 },
+        { name: "William", score: 67 },
+      ];
+
+      students.sort((a, b) => {
+        return b.score - a.score // If b < a, will be negative. Otherwise it's positive. Zero if they're equal
+      });                        // If negative, b will be sorted before a. If positive, a sorted before b. If they're equal, order doesn't matter.
+
+      console.log(students);
+
+      // -----------------------------------------------------------------
+      //  Go through all numbers 1-100. Create three arrays and add numbers to
+      //  them based off the following criteria:
+      //    - Array One should have all numbers divisible by 2
+      //    - Array Two should have all numbers between 16 and 25 (inclusive)
+      //    - Array Three should have all numbers divisible by 4 AND 3
+
+      const arrayOne = [];
+      const arrayTwo = [];
+      const arrayThree = [];
+
+      for (let i = 1; i <= 100; i++) {
+        if (i % 2 === 0) {
+          arrayOne.push(i);
+        }
+        if (i >= 16 && i <= 25) {
+          arrayTwo.push(i);
+        }
+        if (i % 4 === 0 && i % 3 === 0) {
+          arrayThree.push(i);
+        }
+      }
+
+      console.log(arrayOne);
+      console.log(arrayTwo);
+      console.log(arrayThree);
+
+      // -----------------------------------------------------------------
+      // Create an array with all numbers from 1-10.
+      // Copy the array and then using a prototypical function,
+      // replace all the numbers in the new array with the number multiplied by 3.
+      // eg: `[1,2,3,4,5] --> [3,6,9,12,15]`
+
+      // Create the original array
+      const firstArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+      // Create a copy of the original array using the slice() method
+      const secondArray = firstArray.slice();
+
+      console.log(secondArray);
+
+      // Add a prototypical function to the Array object that multiplies each element by 3
+      // Using array.prototype adds the function to the Array object which allows us to use this function as a method for all arrays.
+      Array.prototype.multiplyByThree = function() {
+        for (let i = 0; i < this.length; i++) {
+          this[i] = this[i] * 3;
+        }
+      };
+
+      // Can also define the function this way, but doing it like this means we can't call the function on arrays
+
+      //function multiplyByThree(arr) {
+      //   for (let i = 0; i < arr.length; i++) {
+      //     arr[i] = arr[i] * 3;
+      //   }
+      // }
+
+
+      // Call the multiplyByThree function on the new array to replace each element with its value multiplied by 3
+      secondArray.multiplyByThree();
+
+      // If we defined the function regularly instead of adding it to array.prototype, 
+      // we would have to pass the array as an argument each time we want to use it, like this:
+
+      // multiplyByThree(secondArray);
+
+      // Log the original array and the new array to the console
+      console.log("Original array: " + firstArray); // Output: Original array: 1,2,3,4,5,6,7,8,9,10
+      console.log("New array: " + secondArray); // Output: New array: 3,6,9,12,15,18,21,24,27,30
+    </script>
+  </body>
+</html>

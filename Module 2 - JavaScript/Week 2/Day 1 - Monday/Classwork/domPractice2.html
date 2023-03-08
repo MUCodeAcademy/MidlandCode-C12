@@ -19,9 +19,13 @@
       function test() {
         console.log("running");
       }
+      
       document.addEventListener("DOMContentLoaded", function() {
         test();
       });
+
+      div4.parentNode.insertBefore(div4, document.body.firstChild);
+
     </script>
   </body>
 </html>

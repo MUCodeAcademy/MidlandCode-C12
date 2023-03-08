@@ -26,10 +26,12 @@
       console.log(arrayOneCopy, arrayOne);
 
       // In JavaScript, arrays are reference types. 
-      // This means that when you assign an array to a new variable, you are actually creating a reference to the original array in memory. 
+      // This means that when you assign an array to a new variable, 
+      // you are actually creating a reference to the original array in memory. 
       // This is true for many other data types in JavaScript, such as objects and functions.
       // When you assign arrayOne to arrayOneCopy, you are creating a reference to arrayOne in memory. 
-      // This means that any changes made to arrayOneCopy will also affect arrayOne, because they both point to the same array in memory.
+      // This means that any changes made to arrayOneCopy will also affect arrayOne, 
+      // because they both point to the same array in memory.
       // If you want to create a true copy of the array, use the slice() method
 
       arrayOneCopy = arrayOne;
@@ -44,7 +46,8 @@
       // Any of these that needs a function as an argument can take an arrow function (both examples will be provided)
       let newArray = [1, 4, 5, 3, 9, 7, 8, 6, 2, 9];
       console.log(newArray.indexOf(9), newArray.indexOf(11)); // returns -1 if not present
-      console.log(newArray.toString());
+      console.log("line 49: " + newArray);
+      console.log("line 50: " + newArray.toString());
       newArray.forEach((val) => console.log(val));
       // OR
       // newArray.forEach(function (val) {

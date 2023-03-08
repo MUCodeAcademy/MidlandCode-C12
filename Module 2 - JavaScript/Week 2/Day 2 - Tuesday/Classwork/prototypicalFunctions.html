@@ -24,6 +24,12 @@
         { name: "William", score: 67 },
       ];
 
+      students.sort((a, b) => {
+        return b.score - a.score;
+      })
+
+      console.log(students);
+
       // -----------------------------------------------------------------
       //! Go through all numbers 1-100. Create three arrays and add numbers to
       //! them based off the following criteria:

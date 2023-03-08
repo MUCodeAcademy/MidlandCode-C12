@@ -29,19 +29,29 @@
       //! When the timer reaches zero:
       //!   - Remove the class with the green background and add one with a red background.
       //!   - The timer should also stop counting down.
-      let userTime = prompt("Time limit: ");
-      document.getElementById("clock").innerText = userTime;
-      let counter = setInterval(() => {
-        userTime--;
-        document.getElementById("clock").innerText = userTime;
-      }, 1000);
-      setTimeout(() => {
-        let green = document.getElementsByClassName("green");
-        for (let i = 0; i < green.length; i++) {
-            green[i].classList.replace("green", "red");
+
+      const timer = document.getElementById("clock");
+
+      // Prompt the user for a time limit
+      const timeLimit = parseInt(prompt("Enter a time limit (in seconds):"));
+
+      // Set the initial time remaining and display it on the clock element with a green background
+      let timeRemaining = timeLimit;
+      timer.innerText = timeRemaining;
+      timer.classList.add("green");
+
+      // Create an interval to count down the time every second and update the clock element
+      const countdownInterval = setInterval(function() {
+        timeRemaining--;
+        timer.innerText = timeRemaining;
+        if (timeRemaining <= 0) {
+          // If the time has run out, clear the interval and change the background to red
+          clearInterval(countdownInterval);
+          timer.classList.remove("green");
+          timer.classList.add("red");
         }
-        clearInterval(counter);
-      }, userTime * 1000);
+      }, 1000);
+      
     </script>
   </body>
 </html>
