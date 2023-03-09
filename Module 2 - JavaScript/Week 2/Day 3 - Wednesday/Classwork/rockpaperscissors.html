@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Rock Paper Scissors</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="rockpaperscissors.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="rockPaperScissors.css" />
     
 </head>
 <body>
@@ -21,13 +21,13 @@
     <main>
         <div class="content selection text-center" id="computer">The Computer Hasn't picked yet</div>
         <div class="content selection text-center" id="user">You haven't picked yet</div>
-        <div class="content selection text-center"></div>
+        <div class="content selection text-center" id="final"></div>
         <div class="buttonContainer container content">
-            <button class="choice rock flex33" value="rock">Rock</button>
-            <button class="choice paper flex33"  value="paper">Paper</button>
-            <button class="choice scissors flex33"  value="scissors">Scissors</button>
+            <button class="choice rock flex33" value="rock" id="rock">Rock</button>
+            <button class="choice paper flex33"  value="paper" id="paper">Paper</button>
+            <button class="choice scissors flex33"  value="scissors" id="scissors">Scissors</button>
         </div>
     </main>
-    <script src="./rockpaperscissors.js"></script>
+    <script src="rockpaperscissors.js"></script>
 </body>
 </html>
