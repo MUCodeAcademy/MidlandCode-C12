@@ -12,4 +12,4 @@
 
 //! If it is, change it to display: none;
 
-//! If it's not, change it to display: block;
+//! if it's not, change it to display: block;
