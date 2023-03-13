@@ -14,7 +14,7 @@ This will be due at the start of class on Monday
    - Display a victory screen/alert after the player successfully completes 5 cycles
    - Display a defeat screen/alert if the player clicks a wrong button
 
-2. Build a drawing pad for users. It could look similar to the image sketchpad.jpg, but it can look however you want. It should have the following functionality (at minimum):
+2. Build a drawing pad for users. It could look similar to the image sketchpad.jpg, but it can look however you want. It should have the following functionality (at minimum):asdfasdf
 
    - Have a canvas HTML element
    - Have 3 preset colors of your choice (to the left of the canvas)
